@@ -1,4 +1,3 @@
-from os import name
 import zipfile
 
 nameFile = input('File name or folder: ')
