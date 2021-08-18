@@ -1,5 +1,5 @@
 # ZipFiles
-A simple program written in python to create .zip and extract .zip
+A simple program written in python to create .zip and extract .zip for GNU / linux
 
 install:
 ~~~
