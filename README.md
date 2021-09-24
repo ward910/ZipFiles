@@ -1,17 +1,16 @@
 # ZipFiles
-A simple program written in python to create .zip and extract .zip for GNU / linux
 
-install:
+## A simple program written in python to create .zip and extract .zip for linux
+
+### install:
 ~~~
-git clone https://github.com/ward910/ZipFiles.git 
-mv ZipFiles .ZipFiles
-~~~
-enter the .bashrc or .zshrc file and add this line:
-~~~
-alias zipfiles="python3 ~/.ZipFiles/main.py"
+git clone https://github.com/ward910/ZipFiles.git
+cd ZipFiles && pip install -r requirements.txt
+chmod +x zipfiles
+sudo cp zipfiles /bin
 ~~~
 
-run:
+### run:
 ~~~
 zipfiles
 ~~~
