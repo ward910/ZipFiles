@@ -14,7 +14,7 @@ def zip(name: str, folder: str):
 
     try:
         make_archive(name, 'zip', getcwd(), folder)
-        print('Compactor successful')
+        print("\033[92m {} \033[00m".format('Compactor successful'))
 
     except PermissionError:
         print('Permission denied')
@@ -27,9 +27,9 @@ def unzip(name: str):
         if is_zipfile(name):
             with ZipFile(name, 'r') as zip_ref:
                 zip_ref.extractall(getcwd())
-                print('Unzip successful')
+                print("\033[92m {} \033[00m".format('Unzip successful'))
         else:
-            print('It is not a zip')
+            print("\033[91m {} \033[00m".format('It is not a zip'))
     
     except PermissionError:
         print('Permission denied')
