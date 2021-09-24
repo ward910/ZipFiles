@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+from os import getcwd
+from zipfile import ZipFile, is_zipfile
+from shutil import make_archive
+from typer import Typer
+
+app = Typer()
+
+@app.command()
+def zip(name: str, folder: str):
+
+    """ Must be a folder """
+
+    try:
+        make_archive(name, 'zip', getcwd(), folder)
+        print('Compactor successful')
+
+    except PermissionError:
+        print('Permission denied')
+
+@app.command()
+def unzip(name: str):
+
+    """ To unzip zip files """
+    try:
+        if is_zipfile(name):
+            with ZipFile(name, 'r') as zip_ref:
+                zip_ref.extractall(getcwd())
+        else:
+            print('It is not a zip')
+    
+    except PermissionError:
+        print('Permission denied')
+    
+if __name__ == "__main__":
+    app()
