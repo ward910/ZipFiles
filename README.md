@@ -14,3 +14,17 @@ sudo cp zipfiles /bin
 ~~~
 zipfiles
 ~~~
+
+### command:
+
+#### create a zip file
+
+~~~
+zipfiles zip name folder
+~~~
+
+#### unzip zip file
+
+~~~
+zipfiles unzip name.zip
+~~~
