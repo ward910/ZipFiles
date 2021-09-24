@@ -27,6 +27,7 @@ def unzip(name: str):
         if is_zipfile(name):
             with ZipFile(name, 'r') as zip_ref:
                 zip_ref.extractall(getcwd())
+                print('Unzip successful')
         else:
             print('It is not a zip')
     
