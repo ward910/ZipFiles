@@ -1,2 +1,6 @@
+altgraph==0.17.2
 click==8.0.1
+cx-Freeze==6.8
+importlib-metadata==4.8.1
 typer==0.4.0
+zipp==3.5.0
