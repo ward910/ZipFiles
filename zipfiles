@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from os import getcwd
 from zipfile import ZipFile, is_zipfile
 from shutil import make_archive
