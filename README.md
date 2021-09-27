@@ -6,7 +6,8 @@
 ~~~
 git clone https://github.com/ward910/ZipFiles.git
 cd ZipFiles && pip install -r requirements.txt
-python ./setup.py install
+python ./setup.py build
+cd build/exe.linux-xxxxxx-x.x
 ~~~
 
 ### run:
