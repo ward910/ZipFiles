@@ -6,8 +6,7 @@
 ~~~
 git clone https://github.com/ward910/ZipFiles.git
 cd ZipFiles && pip install -r requirements.txt
-chmod +x zipfiles
-sudo cp zipfiles /bin
+python ./setup.py install
 ~~~
 
 ### run:
