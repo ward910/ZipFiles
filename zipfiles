@@ -13,11 +13,14 @@ def zip(name: str, folder: str):
     """ Must be a folder """
 
     try:
-        make_archive(name, 'zip', getcwd(), folder)
-        print("\033[92m {} \033[00m".format('Compactor successful'))
+            make_archive(name, 'zip', getcwd(), folder)
+            print("\033[92m {} {} \033[00m".format('Compactor successful', getcwd()))
 
-    except PermissionError:
-        print('Permission denied')
+    except MemoryError:
+        print("\033[91m {} \033[00m".format('Is out of memory'))
+
+    except Exception:
+        print("\033[91m {} \033[00m".format('ERROOOOOOOO'))
 
 @app.command()
 def unzip(name: str):
@@ -25,14 +28,17 @@ def unzip(name: str):
     """ To unzip zip files """
     try:
         if is_zipfile(name):
-            with ZipFile(name, 'r') as zip_ref:
-                zip_ref.extractall(getcwd())
-                print("\033[92m {} \033[00m".format('Unzip successful'))
+                with ZipFile(name, 'r') as zip_ref:
+                    zip_ref.extractall(getcwd())
+                    print("\033[92m {} {} \033[00m".format('Unzip successful: ', getcwd()))
         else:
             print("\033[91m {} \033[00m".format('It is not a zip'))
-    
-    except PermissionError:
-        print('Permission denied')
+
+    except MemoryError:
+        print("\033[91m {} \033[00m".format('Is out of memory'))
+
+    except Exception:
+        print("\033[91m {} \033[00m".format('ERROOOOOOOO'))
     
 if __name__ == "__main__":
     app()
