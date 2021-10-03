@@ -10,7 +10,6 @@ python ./setup.py build
 ~~~
 ### install:
 ~~~
-chmod +x build/exe.linux-xxxxxx-x.x/zipfiles
 python ./setup.py install
 ~~~
 ### run:
