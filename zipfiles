@@ -13,8 +13,8 @@ def zip(name: str, folder: str):
     """ Must be a folder """
 
     try:
-            make_archive(name, 'zip', getcwd(), folder)
-            print("\033[92m {} {} \033[00m".format('Compactor successful', getcwd()))
+        make_archive(name, 'zip', getcwd(), folder)
+        print("\033[92m {} {} \033[00m".format('Compactor successful', getcwd()))
 
     except MemoryError:
         print("\033[91m {} \033[00m".format('Is out of memory'))
